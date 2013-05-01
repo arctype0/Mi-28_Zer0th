@@ -161,7 +161,7 @@ DiceFriendsPlugin = {
 			}\n\
 			.dicefriends-settings-column\n\
 			{\n\
-				width: 220px;\n\
+				width: 100px;\n\
 				float: left;\n\
 				padding-bottom: 10px;\n\
 			}\n\
@@ -207,7 +207,7 @@ DiceFriendsPlugin = {
 				$('<label>').attr('for', 'dicefriends-settings-platoon').text('Platoon ID : '),
 				$('<input>').attr('id', 'dicefriends-settings-platoon').attr('type', 'text').attr('value', this.settings.platoon),
 				$("<p>Enter the number found in the platoon\'s page url</p>"),
-				$("<p>Example : http://battlelog.battlefield.com/bf3/platoon/<strong>2832655391300702826</strong>/ for the Official DICE Platoon</p>")
+				$("<p>Example : http://battlelog.battlefield.com/bf3/platoon/<strong>2832655391908727012</strong>/ for the Official DICE Platoon</p>")
 			),
 			$('<h2>').addClass('bblog-title').text('Filter players'),
 			$('<div>').addClass('').append(
