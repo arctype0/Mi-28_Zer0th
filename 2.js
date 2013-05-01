@@ -60,7 +60,7 @@ DiceFriendsPlugin = {
 			'online' : true,
 			'playing' : true
 		},
-		'platoon' : '2832655391908727012'
+		'platoon' : '2832655391300702826'
 	},
 	platformTranslations : {},
 
@@ -159,11 +159,28 @@ DiceFriendsPlugin = {
 			{\n\
 				background-position: 0px -42px;\n\
 			}\n\
+			#popup-dicefriend-settings h2\n\
+			{\n\
+				font-weight: bold;\n\
+				color: #8A8A8A;\n\
+				text-shadow: none;\n\
+				float: left;\n\
+				font-size: 11px;\n\
+				margin-right: 0;\n\
+				margin-top: 12px;\n\
+				text-align: left;\n\
+				font-family: Tahoma,Arial,sans-serif;\n\
+				width: 100%;\n\
+				clear: both;\n\
+				position: relative;\n\
+				text-transform: uppercase;\n\
+			}\n\
 			.dicefriends-settings-column\n\
 			{\n\
 				width: 220px;\n\
 				float: left;\n\
 				padding-bottom: 10px;\n\
+				padding-left: 16px;\n\
 			}\n\
 			'
 		));
@@ -199,6 +216,47 @@ DiceFriendsPlugin = {
 		});
 	},
 	
+	getJSON : function(url, callback)
+	{
+		$.ajax({url:url, dataType:"jsonp", success:callback, jsonpCallback:"callback"});
+	},
+
+	getJSONFromBattlelog : function(url, callback)
+	{
+		$.ajax({url:url, dataType:"json", success:callback, headers:{'X-AjaxNavigation': 1}	});
+	},
+
+	displayPopup : function(title, contentHtml, callback)
+	{
+		var popupHtml = $('<div>').attr('id', 'popup-dicefriend-settings').addClass('common-popup medium common-popup-remove ui-draggable').attr('style', 'margin-left: -457px; margin-top: -169px; top: 50%; position: fixed; display: block; z-index: 1002;').append(
+			$('<div>').addClass('common-popup-title-container').append(
+				$('<div>').addClass('common-popup-title common-popup-handle')
+					.text(title).append(
+					$('<div>').addClass('common-popup-close-container').append(
+						$('<div>').addClass('common-popup-close').html("&nbsp;")
+					)
+				)
+			),
+			$('<div>').addClass('common-popup-content-container').append(
+				contentHtml
+			),
+			$('<div>').addClass('common-popup-footer-container').append(
+				$('<form>').attr('id', 'popup-dicefriend-settings-form').append(
+					$('<input>').attr('type', 'submit').attr('value', "Save").addClass('base-button-arrow-small')
+				)
+			)
+		)
+
+		popupHtml.find('form').bind('submit', function(e){
+			popup.closePopup("popup-dicefriend-settings");
+			if(callback)
+				callback();
+			return false;
+		});
+
+		popupHtml.appendTo(".base-center-popups");
+		popup.centerAndShowPopup(popupHtml);
+	},
 	displaySettingsPopup : function()
 	{
 		popupHtml = $('<div>').addClass('bblog-pop-cont bblog-options bblog-plugins').append(
@@ -207,7 +265,7 @@ DiceFriendsPlugin = {
 				$('<label>').attr('for', 'dicefriends-settings-platoon').text('Platoon ID : '),
 				$('<input>').attr('id', 'dicefriends-settings-platoon').attr('type', 'text').attr('value', this.settings.platoon),
 				$("<p>Enter the number found in the platoon\'s page url</p>"),
-				$("<p>Example : http://battlelog.battlefield.com/bf3/platoon/<strong>2832655391908727012</strong>/ for the Official DICE Platoon</p>")
+				$("<p>Example : http://battlelog.battlefield.com/bf3/platoon/<strong>2832655391300702826</strong>/ for the Official DICE Platoon</p>")
 			),
 			$('<h2>').addClass('bblog-title').text('Filter players'),
 			$('<div>').addClass('').append(
@@ -246,6 +304,9 @@ DiceFriendsPlugin = {
 		});
 
 		BBLog.modalWindow('Dice Friends settings', popupHtml);
+			DiceFriendsPlugin.saveSettings(popupHtml);
+		});
+		//BBLog.modalWindow('Dice Friends settings', popupHtml);
 	},
 
 	displaySettingsOption : function(name, dataKey)
@@ -290,6 +351,7 @@ DiceFriendsPlugin = {
 				$('<div>').attr('id', 'comcenter-dicefriends-settings')
 						  .addClass('comcenter-interact-settings bubble-title-left')
 						  .attr('title', "Open Settings").append(
+						  .addClass('comcenter-interact-settings').append(
 					$('<div>').addClass('comcenter-interact-settings-icon')
 				)
 			)
