@@ -41,7 +41,7 @@ either expressed or implied, of the FreeBSD Project.
 
 DiceFriendsPlugin = {
 	playerList : [],
-	updateInterval : 60*2.5,
+	updateInterval : 60*0.6,
 	dicePlatoon : "/platoon/2832655391908727012/listmembers/",
 	showingDiceFriends : true,
 	platformIcon : {
