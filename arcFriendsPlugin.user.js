@@ -101,7 +101,6 @@ DiceFriendsPlugin = {
 			.avatar medium playing {\n\
 				width: 36px;\n\
 				height: 36px;\n\
-				margin-top: -6px;\n\
 				float: left;\n\
 			}\n\
 			'
