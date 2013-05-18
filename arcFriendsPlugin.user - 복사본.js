@@ -175,6 +175,8 @@ DiceFriendsPlugin = {
 					$('<div>').addClass('comcenter-username-serverinfo').append(
 						$('<span>').addClass('comcenter-full-height common-gameicon-hori bright comcenter-game-icon')
 								   .addClass(this.platformIcon[player.platform]),
+						$('<span>').addClass('comcenter-small-height common-gameicon-hori comcenter-game-icon')
+								   .addClass(this.platformIcon[player.platform]),
 						$('<span>').addClass('common-playing-link').append(
 							(player.serverGuid ?
 								($('<a>').attr('title', player.serverName)
