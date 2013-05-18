@@ -132,7 +132,7 @@ DiceFriendsPlugin = {
 				$('<div>').addClass('dropdownicon')
 			).append(
 				$('<surf:container>').attr('id', 'comcenterDiceFriends').append(
-					$('<span>').text(playerCount.toString() + ' Arc ¼Ò´ë¿ø' + (playerCount != 1 ? 's' : ''))
+					$('<span>').text(playerCount.toString() + ' Arctic platoon' + (playerCount != 1 ? 's' : ''))
 				)
 			)
 		);
