@@ -132,7 +132,7 @@ DiceFriendsPlugin = {
 				$('<div>').addClass('dropdownicon')
 			).append(
 				$('<surf:container>').attr('id', 'comcenterDiceFriends').append(
-					$('<span>').text(playerCount.toString() + ' Arc 소대원 + (playerCount != 1 ? 's' : ''))
+					$('<span>').text(playerCount.toString() + ' Arc 소대원' + (playerCount != 1 ? 's' : ''))
 				)
 			)
 		);
