@@ -163,7 +163,7 @@ DiceFriendsPlugin = {
 					 .addClass('comcenter-friend-item comcenter-friend comcenter-friend-playing comcenter-dicefriend-online') // comcenter-friend-online
 					 .attr('rel', player.userId)
 					 .append(
-				$('<div>').addClass('comcenter-friend-draggable),
+				$('<div>').addClass('comcenter-friend-draggable-arctic),
 				$('<div>').addClass('comcenter-avatar').append(
 					$('<div>').attr('rel', player.userId).addClass('base-avatar-container base-avatar-size-small').append(
 						$('<i>').addClass('avatar medium playing').append(
