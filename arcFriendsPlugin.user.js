@@ -174,6 +174,7 @@ DiceFriendsPlugin = {
 						)
 					)
 				),
+							$('<ul>')
 				$('<div>').addClass('comcenter-username').append(
 					$('<a>').addClass('comcenter-username-link')
 							.attr('data-profile', '/bf3/user/'+ player.name +'/')
