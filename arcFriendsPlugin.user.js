@@ -174,11 +174,10 @@ DiceFriendsPlugin = {
 						)
 					)
 				),
-							$('<ul>')
 				$('<div>').addClass('comcenter-username').append(
 					$('<a>').addClass('comcenter-username-link')
 							.attr('data-profile', '/bf3/user/'+ player.name +'/')
-							.text(player.name),
+							.text(' ',player.name),
 					$('<div>').addClass('comcenter-username-serverinfo').append(
 						$('<span>').addClass('comcenter-full-height common-gameicon-hori bright comcenter-game-icon')
 								   .addClass(this.platformIcon[player.platform]),
@@ -187,7 +186,7 @@ DiceFriendsPlugin = {
 								($('<a>').attr('title', player.serverName)
 										.addClass('common-playing-link base-no-ajax comcenter-playing-link')
 										.attr('href', this.makeLocalizedUrl('/servers/show/'+ player.serverGuid +'/'))
-										.text(player.serverName))
+										.text(' ',player.serverName))
 							:
 								($('<span>').addClass('common-playing-link base-no-ajax comcenter-playing-link fake_a').text(player.serverName))
 							)
