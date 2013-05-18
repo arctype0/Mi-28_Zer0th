@@ -166,13 +166,12 @@ DiceFriendsPlugin = {
 									  .attr('width', 32)
 									  .attr('height', 32)
 						)
-							.attr('&nbsp;')
 					)
 				),
 				$('<div>').addClass('comcenter-username').append(
 					$('<a>').addClass('comcenter-username-link')
 							.attr('data-profile', '/bf3/user/'+ player.name +'/')
-							.text(player.name),
+							.text(&nbsp;player.name),
 					$('<div>').addClass('comcenter-username-serverinfo').append(
 						$('<span>').addClass('comcenter-full-height common-gameicon-hori bright comcenter-game-icon')
 								   .addClass(this.platformIcon[player.platform]),
