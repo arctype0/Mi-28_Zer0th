@@ -162,16 +162,16 @@ DiceFriendsPlugin = {
 				$('<div>').addClass('comcenter-avatar').append(
 					$('<div>').attr('rel', player.userId).addClass('base-avatar-container base-avatar-size-small').append(
 						$('<div>').addClass('base-avatar-status-overlay base-avatar-status-overlay-playing').append(
-							$('<i class="avatar medium online" style="background-image: >').attr('url', 'http://www.gravatar.com/avatar/'+ player.userAvatar +'?s=36&d=http%3A%2F%2Fbattlelog-cdn.battlefield.com%2Fpublic%2Fbase%2Fshared%2Fdefault-avatar-36.png%3Fv%3D7909')
+							$('<img>').attr('src', 'http://www.gravatar.com/avatar/'+ player.userAvatar +'?s=36&d=http%3A%2F%2Fbattlelog-cdn.battlefield.com%2Fpublic%2Fbase%2Fshared%2Fdefault-avatar-36.png%3Fv%3D7909')
 									  .attr('width', 32)
 									  .attr('height', 32)
 						)
-						.attr('</i>')
 					)
 				),
 				$('<div>').addClass('comcenter-username').append(
 					$('<a>').addClass('comcenter-username-link')
 							.attr('data-profile', '/bf3/user/'+ player.name +'/')
+							.attr('&nbsp;')
 							.text(player.name),
 					$('<div>').addClass('comcenter-username-serverinfo').append(
 						$('<span>').addClass('comcenter-full-height common-gameicon-hori bright comcenter-game-icon')
