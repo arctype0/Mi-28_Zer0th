@@ -166,6 +166,7 @@ DiceFriendsPlugin = {
 							.attr('url', 'http://www.gravatar.com/avatar/'+ player.userAvatar +'?s=36&d=http%3A%2F%2Fbattlelog-cdn.battlefield.com%2Fpublic%2Fbase%2Fshared%2Fdefault-avatar-36.png%3Fv%3D7909')
 									  .attr('width', 36)
 									  .attr('height', 36)
+						)
 					)
 				),
 				$('<div>').addClass('comcenter-username').append(
