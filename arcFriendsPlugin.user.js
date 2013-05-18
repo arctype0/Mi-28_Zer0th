@@ -171,7 +171,7 @@ DiceFriendsPlugin = {
 				$('<div>').addClass('comcenter-username').append(
 					$('<a>').addClass('comcenter-username-link')
 							.attr('data-profile', '/bf3/user/'+ player.name +'/')
-							.text(&nbsp;player.name),
+							.text(player.name),
 					$('<div>').addClass('comcenter-username-serverinfo').append(
 						$('<span>').addClass('comcenter-full-height common-gameicon-hori bright comcenter-game-icon')
 								   .addClass(this.platformIcon[player.platform]),
