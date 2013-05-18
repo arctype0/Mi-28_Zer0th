@@ -170,13 +170,13 @@ DiceFriendsPlugin = {
 							$('<img>').attr('src', 'http://www.gravatar.com/avatar/'+ player.userAvatar +'?s=36&d=http%3A%2F%2Fbattlelog-cdn.battlefield.com%2Fpublic%2Fbase%2Fshared%2Fdefault-avatar-36.png%3Fv%3D7909')
 									  .attr('width', 36)
 									  .attr('height', 36)
-									  .attr('vspace', 15)
 						)
 					)
 				),
 				$('<div>').addClass('comcenter-username').append(
 					$('<a>').addClass('comcenter-username-link')
 							.attr('data-profile', '/bf3/user/'+ player.name +'/')
+							.text(¡¡)
 							.text(player.name),
 					$('<div>').addClass('comcenter-username-serverinfo').append(
 						$('<span>').addClass('comcenter-full-height common-gameicon-hori bright comcenter-game-icon')
@@ -186,6 +186,7 @@ DiceFriendsPlugin = {
 								($('<a>').attr('title', player.serverName)
 										.addClass('common-playing-link base-no-ajax comcenter-playing-link')
 										.attr('href', this.makeLocalizedUrl('/servers/show/'+ player.serverGuid +'/'))
+										.text(¡¡)
 										.text(player.serverName))
 							:
 								($('<span>').addClass('common-playing-link base-no-ajax comcenter-playing-link fake_a').text(player.serverName))
