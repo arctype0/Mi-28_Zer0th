@@ -161,8 +161,8 @@ DiceFriendsPlugin = {
 				$('<div>').addClass('comcenter-friend-draggable-dummy'),
 				$('<div>').addClass('comcenter-avatar').append(
 					$('<div>').attr('rel', player.userId).addClass('base-avatar-container base-avatar-size-small').append(
-						$('<i>').addClass('avatar medium playing').append(
-							$('<style="background-image:>').attr('url', 'http://www.gravatar.com/avatar/'+ player.userAvatar +'?s=36&d=http%3A%2F%2Fbattlelog-cdn.battlefield.com%2Fpublic%2Fbase%2Fshared%2Fdefault-avatar-36.png%3Fv%3D7909')
+						$('<i>').addClass('avatar medium online')
+									.attr('style="background-image:','url', 'http://www.gravatar.com/avatar/'+ player.userAvatar +'?s=36&d=http%3A%2F%2Fbattlelog-cdn.battlefield.com%2Fpublic%2Fbase%2Fshared%2Fdefault-avatar-36.png%3Fv%3D7909')
 						)
 					)
 				),
