@@ -216,7 +216,7 @@ DiceFriendsPlugin = {
 	{
 		// check if container used to add our players exists
 		var diceFriendsContainer = $('#comcenterDiceFriends');
-		if(diceFriendsContainer.length > 1)
+		if(diceFriendsContainer.length > 0)
 		{
 			// if yes, clear it
 			diceFriendsContainer.empty();
