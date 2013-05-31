@@ -216,7 +216,7 @@ DiceFriendsPlugin = {
 	{
 		// check if container used to add our players exists
 		var diceFriendsContainer = $('#comcenterDiceFriends');
-		if(diceFriendsContainer.length > 1)
+		if(diceFriendsContainer.length > 0)
 		{
 			// if yes, clear it
 			diceFriendsContainer.empty();
@@ -337,7 +337,7 @@ DiceFriendsPlugin = {
 			var user = member.user;
 
 			// if player is member of the platoon (not only invited) and in a PC game
-			if(member.membershipLevel >= json.context.membershipLevels.MEMBER && user.presence.isPlaying && user.presence.platform == platforms.PC )
+			if(member.membershipLevel >= json.context.membershipLevels.MEMBER && user.presence.isPlaying && user.presence.isOnline && user.presence.platform == platforms.PC )
 			{
 				var player =
 				{
