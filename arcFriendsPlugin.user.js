@@ -336,7 +336,7 @@ DiceFriendsPlugin = {
 			var user = member.user;
 
 			// if player is member of the platoon (not only invited) and in a PC game
-			if(member.membershipLevel >= json.context.membershipLevels.MEMBER && user.presence.isPlaying && user.presence.platform == platforms.PC )
+			if(member.membershipLevel >= json.context.membershipLevels.MEMBER && user.presence.isOnline && user.presence.platform == platforms.PC )
 			{
 				var player =
 				{
