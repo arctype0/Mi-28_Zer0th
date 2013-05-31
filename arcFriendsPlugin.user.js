@@ -216,7 +216,7 @@ DiceFriendsPlugin = {
 	{
 		// check if container used to add our players exists
 		var diceFriendsContainer = $('#comcenterDiceFriends');
-		if(diceFriendsContainer.length > 2)
+		if(diceFriendsContainer.length > 1)
 		{
 			// if yes, clear it
 			diceFriendsContainer.empty();
@@ -251,16 +251,16 @@ DiceFriendsPlugin = {
 		comcenter.scrollableReinitialise();
 		
 		
-		/*
+		
 		Disabled, this element is rendered by battlelog after my hook has been called, overwriting my modifications
 		
 		// add playing dice friend count to the friend count in the taskbar of compact com center
 		var a = $(".comcenter-button-info");
 		a.text(a.text() + " - " + this.playerList.length.toString() + " dice");
-		*/
+		
 	},
 
-/*
+
 	updateDogtagDisplay : function(player)
 	{
 		var dogtagDiv = $('#comcenter-' + player.userId + ' .comcenter-interact-dogtag-parent');
@@ -296,7 +296,7 @@ DiceFriendsPlugin = {
 			}
 		}
 	},
-	*/
+	
 
 /*
 	parseServer : function(json, player)
