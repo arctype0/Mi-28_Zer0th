@@ -194,7 +194,7 @@ DiceFriendsPlugin = {
 				),
 				$('<div>').addClass('comcenter-interact-container').append(
 					$('<form>').addClass('join-friend').attr('method', 'POST').attr('action', this.makeLocalizedUrl('/servers/show/'+ player.serverGuid +'/')).append(
-						$('<input>').attr('type', 'hidden').attr('name', 'game').attr('value', 2),
+						$('<input>').attr('type', 'hidden').attr('name', 'game').attr('value', 1),
 						$('<input>').attr('type', 'hidden').attr('name', 'guid').attr('value', player.serverGuid),
 						$('<div>').attr('title', "Join Game").addClass('bubble-title-left join-friend-submit-link comcenter-interact-playing')
 					),
@@ -336,7 +336,7 @@ DiceFriendsPlugin = {
 			var user = member.user;
 
 			// if player is member of the platoon (not only invited) and in a PC game
-			if(member.membershipLevel >= json.context.membershipLevels.MEMBER && user.presence.isOnline && user.presence.platform == platforms.PC )
+			if(member.membershipLevel >= json.context.membershipLevels.MEMBER && user.presence.isPlaying && user.presence.platform == platforms.PC )
 			{
 				var player =
 				{
