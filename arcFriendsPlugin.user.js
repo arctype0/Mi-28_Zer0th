@@ -102,6 +102,8 @@ DiceFriendsPlugin = {
 				width: 36px;\n\
 				height: 36px;\n\
 				float: left;\n\
+				padding-top: 5px;\n\
+				padding-left: 5px;\n\
 			}\n\
 			'
 		));
