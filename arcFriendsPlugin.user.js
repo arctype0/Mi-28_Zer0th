@@ -98,9 +98,6 @@ DiceFriendsPlugin = {
 				opacity: .4;\n\
 				filter: alpha(opacity=40);\n\
 			}\n\
-			body.fullwidth .avatar medium playing {\n\
-			background-position: -50px -56px;\n\
-			}\n\
 			'
 		));
 		
