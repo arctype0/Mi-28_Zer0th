@@ -216,7 +216,7 @@ DiceFriendsPlugin = {
 	{
 		// check if container used to add our players exists
 		var diceFriendsContainer = $('#comcenterDiceFriends');
-		if(diceFriendsContainer.length > 0)
+		if(diceFriendsContainer.length > 2)
 		{
 			// if yes, clear it
 			diceFriendsContainer.empty();
@@ -260,7 +260,7 @@ DiceFriendsPlugin = {
 		*/
 	},
 
-
+/*
 	updateDogtagDisplay : function(player)
 	{
 		var dogtagDiv = $('#comcenter-' + player.userId + ' .comcenter-interact-dogtag-parent');
@@ -296,6 +296,7 @@ DiceFriendsPlugin = {
 			}
 		}
 	},
+	*/
 
 /*
 	parseServer : function(json, player)
