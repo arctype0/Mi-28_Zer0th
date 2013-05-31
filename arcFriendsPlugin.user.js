@@ -251,13 +251,13 @@ DiceFriendsPlugin = {
 		comcenter.scrollableReinitialise();
 		
 		
-		
+	/*	
 		Disabled, this element is rendered by battlelog after my hook has been called, overwriting my modifications
 		
 		// add playing dice friend count to the friend count in the taskbar of compact com center
 		var a = $(".comcenter-button-info");
 		a.text(a.text() + " - " + this.playerList.length.toString() + " dice");
-		
+	*/	
 	},
 
 
