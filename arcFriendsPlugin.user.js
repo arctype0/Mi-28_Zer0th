@@ -98,11 +98,8 @@ DiceFriendsPlugin = {
 				opacity: .4;\n\
 				filter: alpha(opacity=40);\n\
 			}\n\
-			.avatar medium playing {\n\
-				width: 36px;\n\
-				height: 36px;\n\
-				float: left;\n\
-				margin: 5px 0px 0px 5px;\n\
+			body.fullwidth .avatar medium playing {\n\
+			background-position: -50px -56px;\n\
 			}\n\
 			'
 		));
