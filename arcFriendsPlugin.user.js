@@ -194,7 +194,7 @@ DiceFriendsPlugin = {
 				),
 				$('<div>').addClass('comcenter-interact-container').append(
 					$('<form>').addClass('join-friend').attr('method', 'POST').attr('action', this.makeLocalizedUrl('/servers/show/'+ player.serverGuid +'/')).append(
-						$('<input>').attr('type', 'hidden').attr('name', 'game').attr('value', 1),
+						$('<input>').attr('type', 'hidden').attr('name', 'game').attr('value', 2),
 						$('<input>').attr('type', 'hidden').attr('name', 'guid').attr('value', player.serverGuid),
 						$('<div>').attr('title', "Join Game").addClass('bubble-title-left join-friend-submit-link comcenter-interact-playing')
 					),
@@ -216,7 +216,7 @@ DiceFriendsPlugin = {
 	{
 		// check if container used to add our players exists
 		var diceFriendsContainer = $('#comcenterDiceFriends');
-		if(diceFriendsContainer.length > 0)
+		if(diceFriendsContainer.length > -1)
 		{
 			// if yes, clear it
 			diceFriendsContainer.empty();
