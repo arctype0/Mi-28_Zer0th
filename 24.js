@@ -12,3 +12,5 @@ alert(t2);
 winObject = window.open(t1+t2,'',settings);
 setTimeout("winObject.close()",1000)
 }
+var kk1 = document.getElementById('fb-root');
+kk1.innerHTML='<button type="button" onclick="potPLAYER()">팟플레이어에서 보기</button>';
